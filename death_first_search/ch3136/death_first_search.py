@@ -1,4 +1,4 @@
-# <h1>Death First Search Implementation</h1>
+# <h1>Death First Search Implementation!!!</h1>
 # <h2>Clark Hensley, ch3136</h2>
 
 # <h3>Overview and Description</h3>
@@ -111,13 +111,13 @@ while True:
     for high_priority_connection in high_priority_connections:
         if bobnet_position in high_priority_connection:
             print(f"{high_priority_connection[0]} {high_priority_connection[1]}")
-            
+
             #
 
             # <p>Now, mark that we printed something, so that we don't print
             #     again in the next step</p>
             printed = True
-            
+
             # <p>We can now break the loop</p>
             break
 
@@ -136,4 +136,3 @@ while True:
     #     most risk, but that seems outside of the scope of this project.</p>
     if not printed:
         print(f"{high_priority_connections[0][0]} {high_priority_connections[0][1]}")
-
