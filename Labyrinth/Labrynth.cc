@@ -9,7 +9,7 @@
 // <p style="padding-left: 40px;">The information that helped solve this puzzle
 //     came from the "Introduction to Algorithms" course offered</p>
 // <p>&nbsp;</p>
-// <h2>The Code - Labyrinth</h2>
+// <h2>The Code - Labyrinth (Checking the link to the git repo in smartgit)</h2>
 #include <iostream>
 #include <vector>
 #include <string>
