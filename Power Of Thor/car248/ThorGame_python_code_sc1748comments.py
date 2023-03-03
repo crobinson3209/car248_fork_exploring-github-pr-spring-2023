@@ -8,10 +8,11 @@
 # <p><strong>link to game:</strong> <a
 #         href="https://www.codingame.com/training/easy/power-of-thor-episode-1">Power
 #         of Thor: Episode 1 (from codingame.com)</a>&nbsp;</p>
-# <p><span style="background-color: rgb(251, 238, 184);">SSC: I'd suggest making
-#         "Game Overview" a bigger heading like "Goals of Assignment".</span>
-# </p>
-# <blockquote><strong>Game Overview:</strong>
+# <p><span style="background-color: rgb(251, 238, 184);"><strong>New changes:
+#             increased heading level of "Game Overview", per
+#             suggestion</strong><br></span></p>
+# <h2><strong>Game Overview:</strong></h2>
+# <blockquote>
 #     <p>On a gridded playing field, there is a character (Thor) and a location
 #         (the Light of Power).</p>
 #     <p>The object of the game is to move Thor to the same position as the
@@ -21,50 +22,87 @@
 #     <p>The string will either consist of one or two letters from the following
 #         options: N, NE, E, SE, S, SW, W, or NW.</p>
 #     <p>To make decisions on which direction to move, conditional operators and
-#         if/else statements are used. <span
-#             style="background-color: rgb(251, 238, 184);">SSC: Pseudocode
-#             could be useful here, since there are several statements (we want
-#             to make sure we include all possibilities)</span></p>
+#         if/else statements are used.</p>
+#     <p><strong><span style="background-color: rgb(251, 238, 184);">New
+#                 Changes: added psuedo code below</span></strong></p>
+#     <ul>
+#         <li><strong><span style="background-color: rgb(251, 238, 184);">record
+#                     initial positions of thor and light of
+#                     power</span></strong></li>
+#         <li><strong><span style="background-color: rgb(251, 238, 184);">use
+#                     IF/ELSE statement to determine if Thor should move North
+#                     or South to become closer to light</span></strong>
+#             <ul>
+#                 <li><strong><span
+#                             style="background-color: rgb(251, 238, 184);">save
+#                             intended direction (as "N" or "S") in string
+#                             variable to be output later</span></strong></li>
+#                 <li><strong><span
+#                             style="background-color: rgb(251, 238, 184);">if
+#                             no movement needed, do not add N or S direction to
+#                             string.</span></strong></li>
+#                 <li><strong><span
+#                             style="background-color: rgb(251, 238, 184);">increment/decrement
+#                             Thor's saved position in accordance with direction
+#                             moved</span></strong></li>
+#             </ul>
+#         </li>
+#         <li><strong><span style="background-color: rgb(251, 238, 184);">use
+#                     IF/ELSE statement to determine if Thor should move East or
+#                     West to become closer to light</span></strong>
+#             <ul>
+#                 <li><strong><span
+#                             style="background-color: rgb(251, 238, 184);">append
+#                             intended direction (as "E" or "W") to the output
+#                             string</span></strong></li>
+#                 <li><strong><span
+#                             style="background-color: rgb(251, 238, 184);">if
+#                             no movement needed, do not added direction to
+#                             string</span></strong></li>
+#                 <li><strong><span
+#                             style="background-color: rgb(251, 238, 184);">update
+#                             Thor's position</span></strong></li>
+#             </ul>
+#         </li>
+#         <li><strong><span style="background-color: rgb(251, 238, 184);">Output
+#                     the string holding the direction to be moved
+#                     in</span></strong></li>
+#         <li><strong><span style="background-color: rgb(251, 238, 184);">repeat
+#                     the above until Thor's position = Light's
+#                     position</span></strong></li>
+#     </ul>
+# </blockquote>
+# <blockquote>
+#     <p>&nbsp;</p>
 #     <p>&nbsp;</p>
 #     <p>As seen in the example diagram below, each space on the board can be
 #         represented by a row and column.</p>
 #     <p>The game stores the position in X and in Y as the index in an array
 #         each.</p>
 #     <p>For example, below, Thor's X position is 6, and his Y position is 1.
-#         The Light's X is 2 and its Y is 4.&nbsp; &nbsp;<span
-#             style="background-color: rgb(251, 238, 184);">SSC: This figure is
-#             a good way to show that the scene is defined by
-#             coordinates!</span></p>
+#         The Light's X is 2 and its Y is 4.&nbsp; </p>
+#     <p><span style="background-color: rgb(251, 238, 184);"><strong>New
+#                 Changes: added coordinates to some cells to more clearly show
+#                 the layout</strong></span></p>
+#     <p>Coordinates of some cells are shown. The rest can be inferred.</p>
 #     <table
 #         style="border-collapse: collapse; width: 33.5088%; height: 133.2px;"
 #         border="1">
-#         <colgroup>
-#             <col style="width: 9.93117%;">
-#             <col style="width: 9.93117%;">
-#             <col style="width: 10.0295%;">
-#             <col style="width: 10.0295%;">
-#             <col style="width: 9.93117%;">
-#             <col style="width: 9.93117%;">
-#             <col style="width: 10.0295%;">
-#             <col style="width: 10.0295%;">
-#             <col style="width: 10.0295%;">
-#             <col style="width: 10.0295%;">
-#         </colgroup>
 #         <tbody>
 #             <tr style="height: 22.2px;">
-#                 <td style="height: 22.2px;">&nbsp;</td>
-#                 <td style="height: 22.2px;">&nbsp;</td>
-#                 <td style="height: 22.2px;">&nbsp;</td>
-#                 <td style="height: 22.2px;">&nbsp;</td>
-#                 <td style="height: 22.2px;">&nbsp;</td>
-#                 <td style="height: 22.2px;">&nbsp;</td>
-#                 <td style="height: 22.2px;">&nbsp;</td>
-#                 <td style="height: 22.2px;">&nbsp;</td>
-#                 <td style="height: 22.2px;">&nbsp;</td>
-#                 <td style="height: 22.2px;">&nbsp;</td>
+#                 <td style="height: 22.2px;">0 , 0</td>
+#                 <td style="height: 22.2px;">0 , 1</td>
+#                 <td style="height: 22.2px;">0, 2</td>
+#                 <td style="height: 22.2px;">0 , 3</td>
+#                 <td style="height: 22.2px;">0 , 4</td>
+#                 <td style="height: 22.2px;">0 , 5</td>
+#                 <td style="height: 22.2px;">0 , 6</td>
+#                 <td style="height: 22.2px;">0 , 7</td>
+#                 <td style="height: 22.2px;">0 , 8</td>
+#                 <td style="height: 22.2px;">0 , 9</td>
 #             </tr>
 #             <tr style="height: 22.2px;">
-#                 <td style="height: 22.2px;">&nbsp;</td>
+#                 <td style="height: 22.2px;">1 , 0</td>
 #                 <td style="height: 22.2px;">&nbsp;</td>
 #                 <td style="height: 22.2px;">&nbsp;</td>
 #                 <td style="height: 22.2px;">&nbsp;</td>
@@ -76,19 +114,7 @@
 #                 <td style="height: 22.2px;">&nbsp;</td>
 #             </tr>
 #             <tr style="height: 22.2px;">
-#                 <td style="height: 22.2px;">&nbsp;</td>
-#                 <td style="height: 22.2px;">&nbsp;</td>
-#                 <td style="height: 22.2px;">&nbsp;</td>
-#                 <td style="height: 22.2px;">&nbsp;</td>
-#                 <td style="height: 22.2px;">&nbsp;</td>
-#                 <td style="height: 22.2px;">&nbsp;</td>
-#                 <td style="height: 22.2px;">&nbsp;</td>
-#                 <td style="height: 22.2px;">&nbsp;</td>
-#                 <td style="height: 22.2px;">&nbsp;</td>
-#                 <td style="height: 22.2px;">&nbsp;</td>
-#             </tr>
-#             <tr style="height: 22.2px;">
-#                 <td style="height: 22.2px;">&nbsp;</td>
+#                 <td style="height: 22.2px;">2 , 0</td>
 #                 <td style="height: 22.2px;">&nbsp;</td>
 #                 <td style="height: 22.2px;">&nbsp;</td>
 #                 <td style="height: 22.2px;">&nbsp;</td>
@@ -100,7 +126,19 @@
 #                 <td style="height: 22.2px;">&nbsp;</td>
 #             </tr>
 #             <tr style="height: 22.2px;">
+#                 <td style="height: 22.2px;">3 , 0</td>
 #                 <td style="height: 22.2px;">&nbsp;</td>
+#                 <td style="height: 22.2px;">&nbsp;</td>
+#                 <td style="height: 22.2px;">&nbsp;</td>
+#                 <td style="height: 22.2px;">&nbsp;</td>
+#                 <td style="height: 22.2px;">&nbsp;</td>
+#                 <td style="height: 22.2px;">&nbsp;</td>
+#                 <td style="height: 22.2px;">&nbsp;</td>
+#                 <td style="height: 22.2px;">&nbsp;</td>
+#                 <td style="height: 22.2px;">&nbsp;</td>
+#             </tr>
+#             <tr style="height: 22.2px;">
+#                 <td style="height: 22.2px;">4 , 0</td>
 #                 <td style="height: 22.2px;">&nbsp;</td>
 #                 <td style="height: 22.2px;">LIGHT</td>
 #                 <td style="height: 22.2px;">&nbsp;</td>
@@ -112,7 +150,7 @@
 #                 <td style="height: 22.2px;">&nbsp;</td>
 #             </tr>
 #             <tr style="height: 22.2px;">
-#                 <td style="height: 22.2px;">&nbsp;</td>
+#                 <td style="height: 22.2px;">5 , 0</td>
 #                 <td style="height: 22.2px;">&nbsp;</td>
 #                 <td style="height: 22.2px;">&nbsp;</td>
 #                 <td style="height: 22.2px;">&nbsp;</td>
@@ -125,16 +163,18 @@
 #             </tr>
 #         </tbody>
 #     </table>
+#     <p>&nbsp;</p>
+#     <p>&nbsp;</p>
 #     <br>
 #     <p>&nbsp;</p>
-#     <p><span style="background-color: rgb(251, 238, 184);">SSC: The game's
-#             objective and your solution to the game are somewhat intermingled.
-#             I would suggest perhaps dividing them up into two sections: an
-#             overview of the game (like you've already done) and an additional
-#             "Approach" section.</span></p>
-#     <p><span style="background-color: rgb(251, 238, 184);">Overall, your
-#             information and process is clear, just needs a little bit of
-#             sectioning!</span></p>
+#     <span style="background-color: rgb(251, 238, 184);"><strong>** Decided not
+#             to make suggested changes to commenting style below in code,
+#             because the approach is more clearly outlined in the pseudocode
+#             above. </strong></span>
+# </blockquote>
+# <blockquote><span style="background-color: rgb(251, 238, 184);"><strong>**
+#             Leaving the code comments as-is so there is context for each
+#             block&nbsp;</strong></span><br>
 #     <p>&nbsp;</p>
 # </blockquote>
 
@@ -204,8 +244,7 @@ while True:
 
      # <h3>Output the Direction</h3>
      # <p>A single string output determines the move to be made: N NE E SE S SW
-     #     W or NW <span style="background-color: rgb(251, 238, 184);">SSC: Good
-     #         comments and sections!</span></p>
+     #     W or NW&nbsp;</p>
         print(action_str)
 
 
